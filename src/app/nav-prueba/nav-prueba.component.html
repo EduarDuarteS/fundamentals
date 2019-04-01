@@ -11,9 +11,24 @@
     </mat-nav-list>
   </mat-sidenav>
 
-  <mat-sidenav-content>
+
+  <mat-sidenav-content >
+    <mat-toolbar color="primary">
+      <button
+      type="button"
+      aria-label="Toggle sidenav"
+      mat-icon-button
+      (click)="sidenav.open()">
+      <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+    </button>
+    <span>fundamentals</span>
+  </mat-toolbar>
+  <!-- Add Content Here -->
+       <router-outlet ></router-outlet>
+  </mat-sidenav-content>
+  <!-- <mat-sidenav-content>
     <p><button mat-button (click)="sidenav.open()">Open</button></p>
     <p>Closed due to: {{reason}}</p>
     <router-outlet></router-outlet>
-  </mat-sidenav-content>
+  </mat-sidenav-content> -->
 </mat-sidenav-container>
