@@ -10,6 +10,7 @@ import { PruebasComponent } from './pruebas/pruebas.component';
 import { NavPruebaComponent } from "./nav-prueba/nav-prueba.component";
 import { RouterModule } from '@angular/router';
 import { MaterialModule } from './app.material.module';
+import { CommBetweenCompModule } from './commBetweenComponents/commBetweenC.module';
 
 @NgModule({
   declarations: [
@@ -19,11 +20,14 @@ import { MaterialModule } from './app.material.module';
     PruebasComponent
   ],
   imports: [
+
     BrowserModule,
     LayoutModule,
     RouterModule.forRoot([
-      {path: 'prueba', component: PruebasComponent}
+      { path: 'prueba', component: PruebasComponent},
+
     ]),
+    CommBetweenCompModule,
     MaterialModule
   ],
   providers: [],
