@@ -1,6 +1,10 @@
 <div class="container">
-  <h1>Upcoming Events</h1>
+  <h1>Dogs Breeds</h1>
   <hr>
-  <app-child-tarjeta></app-child-tarjeta>
-
-  </div>
+  <app-child-tarjeta #childReference *ngFor="let breed of breeds"
+  [cardsInput]=breed
+  (childOuputBtnLeft)=clickChildLeft($event)
+  (childOuputBtnRigh)=clickChildRight($event)
+  ></app-child-tarjeta>
+   <button mat-raised-bottom  type="button" (click)="childReference.metodoChild()" name="button">Child Method</button>
+</div>
