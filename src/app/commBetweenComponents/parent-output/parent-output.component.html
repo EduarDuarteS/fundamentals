@@ -1,10 +1,21 @@
+
 <div class="container">
   <h1>Dogs Breeds</h1>
   <hr>
-  <app-child-tarjeta #childReference *ngFor="let breed of breeds"
-  [cardsInput]=breed
-  (childOuputBtnLeft)=clickChildLeft($event)
-  (childOuputBtnRigh)=clickChildRight($event)
-  ></app-child-tarjeta>
-   <button mat-raised-bottom  type="button" (click)="childReference.metodoChild()" name="button">Child Method</button>
+
+  <div class="row">
+
+    <div class="col-md-3 hCard"*ngFor="let breed of breeds">
+      <app-child-tarjeta #childReference
+      [cardsInput]=breed
+      (childOuputBtnLeft)=clickChildLeft($event)
+      (childOuputBtnRigh)=clickChildRight($event)
+      >
+    </app-child-tarjeta>
+    <button mat-raised-bottom  type="button" (click)="childReference.metodoChild()" name="button">Child Method</button>
+    <h3>{{childReference.someProperty}}</h3>
+  </div>
+
+</div>
+
 </div>

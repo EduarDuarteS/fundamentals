@@ -4,7 +4,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   selector: 'app-child-tarjeta',
   templateUrl: './child-tarjeta.component.html',
   styles: [`
-    .example-card {
+    .card-width {
       max-width: 300px;
     }
     .image-cover {
@@ -20,6 +20,7 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
     @Output() childOuputBtnLeft = new EventEmitter();
     @Output() childOuputBtnRigh = new EventEmitter();
 
+    someProperty: any= "Child property";
     clickCardBtnRigth(){
       this.childOuputBtnRigh.emit(this.cardsInput.cardTitle);
     }
@@ -27,8 +28,9 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
       this.childOuputBtnLeft.emit(this.cardsInput.cardSubtitle);
     }
 
-    metodoChild(){
-      console.log('print of child metod');
+    public metodoChild(){
+      console.log('print of child metod '+ this.cardsInput.cardTitle);
+      this.someProperty = this.cardsInput.cardTitle;
     }
 
     constructor() { }

@@ -1,27 +1,27 @@
 
-<mat-card class="example-card">
-  <mat-card-header>
-    <div mat-card-avatar class="image-cover"
-    [style.background-image]="'url(' + cardsInput.imageCover + ')'"
-    ></div>
-    <mat-card-title>{{cardsInput.cardTitle}}</mat-card-title>
-    <mat-card-subtitle *ngIf="cardsInput.cardSubtitle">{{cardsInput.cardSubtitle}}</mat-card-subtitle>
-  </mat-card-header>
-  <img mat-card-image [src]=cardsInput.imageMain alt="Photo of a Malamute">
-  <mat-card-content>
-    <p>
-      {{cardsInput.cardContent}}
-      <br>
-    </p>
+  <mat-card class="card-width">
+    <mat-card-header>
+      <div mat-card-avatar class="image-cover"
+      [style.background-image]="'url(' + cardsInput.imageCover + ')'"
+      ></div>
+      <mat-card-title>{{cardsInput.cardTitle}}</mat-card-title>
+      <mat-card-subtitle *ngIf="cardsInput.cardSubtitle">{{cardsInput.cardSubtitle}}</mat-card-subtitle>
+    </mat-card-header>
+    <img mat-card-image [src]=cardsInput.imageMain alt="Photo of a Malamute">
+    <mat-card-content>
+      <p>
+        {{cardsInput.cardContent}}
+        <br>
+      </p>
 
-  </mat-card-content>
-  <div class="spacer">
-    <span *ngIf="cardsInput.time" autofocus class="spacer">Time: {{cardsInput.time}}</span>
-    <br>
-    <span *ngIf="cardsInput.date" class="spacer">Date: {{cardsInput.date}}</span>
-  </div>
-  <mat-card-actions>
-    <button mat-raised-button (click)=clickCardBtnLeft() fucused=true color="primary">{{cardsInput.btnLeft}}</button>
-    <button mat-raised-button (click)=clickCardBtnRigth() color="primary">{{cardsInput.btnRight}}</button>
-  </mat-card-actions>
-</mat-card>
+    </mat-card-content>
+    <div class="spacer">
+      <span *ngIf="cardsInput.time" autofocus class="spacer">Time: {{cardsInput.time}}</span>
+      <br>
+      <span *ngIf="cardsInput.date" class="spacer">Date: {{cardsInput.date}}</span>
+    </div>
+    <mat-card-actions>
+      <button mat-raised-button (click)=clickCardBtnLeft() fucused=true color="primary">{{cardsInput.btnLeft}}</button>
+      <button mat-raised-button (click)=clickCardBtnRigth() color="primary">{{cardsInput.btnRight}}</button>
+    </mat-card-actions>
+  </mat-card>
